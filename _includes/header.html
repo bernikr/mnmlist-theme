@@ -1,0 +1,5 @@
+{% if include.frontpost %}
+<h2>{{ site.title }}: <a href="{{ include.frontpost.url }}"><b>{{ include.frontpost.title }}</b></a></h2>
+{% else %}
+<h2><a href="/">{{ site.title }}</a>: <b>{{ page.title }}</b></h2>
+{% endif %}

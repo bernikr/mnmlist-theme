@@ -1,0 +1,23 @@
+---
+layout: page
+title: archives
+---
+<table>
+	<tbody>
+		<tr><th><h1><b>all posts</b></h1></th></tr>
+		{% for post in site.posts %}
+	  		{% assign currentyear = post.date | date: "%Y" %}
+	  		{% if currentyear != year %}
+				<tr><th><br><br>{{ currentyear }}</th></tr>
+	    		{% assign year = currentyear %}
+				{% assign month = 0 %}
+	  		{% endif %}
+			{% assign currentmonth = post.date | date: "%B" %}
+	  		{% if currentmonth != month %}
+				<tr class="archive"><th>{{ currentmonth }}</th></tr>
+	    		{% assign month = currentmonth %}
+	  		{% endif %}
+			<tr class="archive"><th>{{post.date | date:"%-d"}}</th><td><a href="{{ post.url }}">{{ post.title }}</a></td></tr>
+	{% endfor %}
+	</tbody>
+</table>

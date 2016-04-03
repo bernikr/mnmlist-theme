@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div id="content">
+	<div class="post">
+		{% include header.html frontpost=site.posts.first %}
+		<div class="entry">
+			{{ site.posts.first.content }}
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h1><a href="/archive/">all posts »</a></h1>
+</div>
+{% include footer.html %}

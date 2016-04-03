@@ -1,0 +1,18 @@
+# Site settings
+title: mnmlist
+description: >
+  A elegant minimal design for your Jekyll site.
+  Based on Leo Babutas mnmlist blog.
+baseurl: ""
+permalink: /:title
+
+# Build settings
+markdown: kramdown
+future: true
+
+defaults:
+    -
+        scope:
+            path: ""
+        values:
+            layout: page
