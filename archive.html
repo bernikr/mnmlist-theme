@@ -8,7 +8,7 @@ title: archives
 		{% for post in site.posts %}
 	  		{% assign currentyear = post.date | date: "%Y" %}
 	  		{% if currentyear != year %}
-				<tr><th><br><br>{{ currentyear }}</th></tr>
+				<tr class="year"><th><br><br>{{ currentyear }}</th></tr>
 	    		{% assign year = currentyear %}
 				{% assign month = 0 %}
 	  		{% endif %}
@@ -17,7 +17,7 @@ title: archives
 				<tr class="archive"><th>{{ currentmonth }}</th></tr>
 	    		{% assign month = currentmonth %}
 	  		{% endif %}
-			<tr class="archive"><th>{{post.date | date:"%-d"}}</th><td><a href="{{ post.url }}">{{ post.title }}</a></td></tr>
+			<tr class="archive"><th>{{post.date | date:"%-d"}}</th><td><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></td></tr>
 	{% endfor %}
 	</tbody>
 </table>

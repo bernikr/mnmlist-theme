@@ -3,7 +3,7 @@
 
     <title>{% if page.title and page.url != "/" %}{{ page.title | append:" :" | append:site.title | escape }}{% else %}{{ site.title | prepend:":" | escape }}{% endif %}</title>
 
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ site.github.url }}/css/main.css">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.github.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.github.url }}">
 </head>
