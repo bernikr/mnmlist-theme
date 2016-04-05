@@ -3,7 +3,7 @@ layout: default
 ---
 <div id="content">
 	<div class="post">
-		{% include header.html frontpost=site.posts.first %}
+		<h2>{{ site.title }}: <a href="{{ site.posts.first.url | prepend: site.github.url}}"><b>{{ site.posts.first.title }}</b></a></h2>
 		<div class="entry">
 			{{ site.posts.first.content }}
 		</div>

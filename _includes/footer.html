@@ -1,5 +1,15 @@
 <div id="footer">
     <p>
-        <a href="{{ site.github.url }}/about">more</a> :: <a href="{{ site.github.url }}/uncopyright">uncopyright</a> :: <a href="{{ site.github.url }}/less">less</a>
+        {% for link in site.data.footer %}
+            {% if forloop.index != 1 %}
+             ::
+            {% endif %}
+            {% if link.url contains 'http' %}
+                {% assign domain = '' %}
+            {% else %}
+                {% assign domain = site.github.url %}
+            {% endif %}
+            <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+  {% endfor %}
     </p>
 </div>

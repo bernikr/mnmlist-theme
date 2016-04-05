@@ -1,5 +1,0 @@
-{% if include.frontpost %}
-<h2>{{ site.title }}: <a href="{{ include.frontpost.url | prepend: site.github.url}}"><b>{{ include.frontpost.title }}</b></a></h2>
-{% else %}
-<h2><a href="{{ site.github.url }}">{{ site.title }}</a>: <b>{{ page.title }}</b></h2>
-{% endif %}
